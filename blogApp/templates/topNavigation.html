@@ -36,23 +36,23 @@
                     </li>
                     {% endfor %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'category-page' %}">All Categories</a>
+                        <a class="nav-link" href="{% url 'category-page' %}">Tất cả danh mục</a>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav d-flex flex-row">
                     {% if user.id %}
                     <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="{% url 'post-mgt' %}">Post Mgt</a>
+                        <a class="nav-link" href="{% url 'post-mgt' %}">Post edit</a>
                     </li>
                     {% if user.profile.user_type == 1 %}
                     <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="{% url 'category-mgt' %}">Category Mgt</a>
+                        <a class="nav-link" href="{% url 'category-mgt' %}">Category edit</a>
                     </li>
                     {% endif %}
                     <li class="nav-item me-3 me-lg-0">
                         <a class="nav-link" href="{% url 'profile' %}">
-                            <span class="me-1"><img src="{{ user.profile.avatar.url }}" alt="User Avatar" id="user-avatar" class="img-thumbnail rounded-circle"></span>Howdy, {{ user.first_name }} {{user.last_name}}
+                            <span class="me-1"><img src="{{ user.profile.avatar.url }}" alt="User Avatar" id="user-avatar" class="img-thumbnail rounded-circle"></span>Chào, {{ user.first_name }} {{user.last_name}}
                         </a>
                         <!-- <a class="nav-link" href="{% url 'logout' %}">Logout</a> -->
                     </li>
